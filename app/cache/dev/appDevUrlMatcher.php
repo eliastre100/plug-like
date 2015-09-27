@@ -127,6 +127,15 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // eliastre100_home_homepage
+        if (rtrim($pathinfo, '/') === '') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'eliastre100_home_homepage');
+            }
+
+            return array (  '_controller' => 'Eliastre100HomeBundle:Pages:index',  '_route' => 'eliastre100_home_homepage',);
+        }
+
         // eliastre100_user_homepage
         if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'eliastre100_user_homepage')), array (  '_controller' => 'Eliastre100\\UserBundle\\Controller\\DefaultController::indexAction',));

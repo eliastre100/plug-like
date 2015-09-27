@@ -1,3 +1,7 @@
+eliastre100_home:
+    resource: "@Eliastre100HomeBundle/Resources/config/routing.yml"
+    prefix:   /
+
 eliastre100_user:
     resource: "@Eliastre100UserBundle/Resources/config/routing.yml"
     prefix:   /

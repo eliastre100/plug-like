@@ -19,6 +19,7 @@
       <parameter key="AppBundle">AppBundle\AppBundle</parameter>
       <parameter key="FOSUserBundle">FOS\UserBundle\FOSUserBundle</parameter>
       <parameter key="Eliastre100UserBundle">Eliastre100\UserBundle\Eliastre100UserBundle</parameter>
+      <parameter key="Eliastre100HomeBundle">Eliastre100\HomeBundle\Eliastre100HomeBundle</parameter>
       <parameter key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
@@ -2123,7 +2124,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>560825cd176f13.46242328</argument>
+            <argument>56082aab840fb6.39285280</argument>
           </service>
         </argument>
       </argument>
@@ -2395,7 +2396,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>560825cd176f13.46242328</argument>
+            <argument>56082aab840fb6.39285280</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -3539,6 +3540,10 @@
       <call method="addPath">
         <argument>/home/eliastre100/Prog/projets/plug-like/src/Eliastre100/UserBundle/Resources/views</argument>
         <argument>Eliastre100User</argument>
+      </call>
+      <call method="addPath">
+        <argument>/home/eliastre100/Prog/projets/plug-like/src/Eliastre100/HomeBundle/Resources/views</argument>
+        <argument>Eliastre100Home</argument>
       </call>
       <call method="addPath">
         <argument>/home/eliastre100/Prog/projets/plug-like/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views</argument>

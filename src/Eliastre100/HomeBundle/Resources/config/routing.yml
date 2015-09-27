@@ -1,0 +1,3 @@
+eliastre100_home_homepage:
+    path:     /
+    defaults: { _controller: Eliastre100HomeBundle:Pages:index }
