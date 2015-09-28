@@ -1,5 +1,0 @@
-_assetic:
-    resource: .
-    type: assetic
-_app:
-    resource: /home/eliastre100/Prog/projets/plug-like/app/config/routing_dev.yml
