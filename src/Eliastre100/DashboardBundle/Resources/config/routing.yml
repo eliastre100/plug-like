@@ -1,0 +1,7 @@
+eliastre100_dashboard_homepage:
+    path:     /dashboard
+    defaults: { _controller: Eliastre100DashboardBundle:Dashboard:index }
+
+eliastre100_dashboard_create:
+    path:     /dashboard/create
+    defaults: { _controller: Eliastre100DashboardBundle:Rooms:create }

@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new Eliastre100\UserBundle\Eliastre100UserBundle(),
             new Eliastre100\HomeBundle\Eliastre100HomeBundle(),
+            new Eliastre100\DashboardBundle\Eliastre100DashboardBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

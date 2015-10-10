@@ -1,0 +1,13 @@
+{% extends 'Eliastre100DashboardBundle::layout.html.twig' %}
+
+{% block title %}
+Dashboard {{ app.user.username }}
+{% endblock %}
+
+{% block content %}
+	<h1>Dashboard</h1>
+	<p>Here is your page where are show all your comunities ordered by number of users in<br />
+		To create a new on you can go to <a href="{{ path('eliastre100_dashboard_create') }}">here</a><br />
+		<hr/>
+		You can customize this page by editing the src/Eliastre100/DashboardBundle/ressources/views/Dashboard/index.html.twig or by overload it.</p>
+{% endblock %}
