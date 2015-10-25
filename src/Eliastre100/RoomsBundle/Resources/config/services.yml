@@ -1,0 +1,4 @@
+services:
+#    eliastre100_rooms.example:
+#        class: Eliastre100\RoomsBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

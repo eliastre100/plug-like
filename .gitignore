@@ -2,3 +2,6 @@ app/cache
 app/logs
 vendor/
 composer.lock
+web/framework
+web/bundles
+bin

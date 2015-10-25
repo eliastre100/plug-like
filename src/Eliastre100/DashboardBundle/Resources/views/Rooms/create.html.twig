@@ -1,0 +1,21 @@
+{% extends 'Eliastre100DashboardBundle::layout.html.twig' %}
+
+
+{% block title %}
+	Create a room
+{% endblock %}
+
+{% block content %}
+	{{ form_start(form) }}
+	{{ form_errors(form.name) }}
+	{{ form_label(form.name) }}
+	{{ form_widget(form.name) }}
+	<br />
+	{{ form_errors(form.description) }}
+	{{ form_label(form.description) }}
+	{{ form_widget(form.description) }}
+	{{ form_end(form) }}
+
+	<hr />
+	<p>You can modify this page by editing src/Eliastre100/Dashboard/Ressources/views/Rooms/create.html.twig or overload it</p>
+{% endblock %}
