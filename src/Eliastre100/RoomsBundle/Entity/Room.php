@@ -3,12 +3,14 @@
 namespace Eliastre100\RoomsBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * Room
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="Eliastre100\RoomsBundle\Entity\\RoomRepository")
+ * @ORM\Entity(repositoryClass="Eliastre100\RoomsBundle\Entity\RoomRepository")
+ * @uniqueEntity("name");
  */
 class Room
 {
@@ -31,7 +33,7 @@ class Room
     /**
      * @var string
      *
-     * @ORM\Column(name="tag", type="string", length=255)
+     * @ORM\Column(name="tag", type="string", length=255, unique=true)
      */
     private $tag;
 
