@@ -8,6 +8,13 @@ Dashboard {{ app.user.username }}
 	<h1>Dashboard</h1>
 	<p>Here is your page where are show all your comunities ordered by number of users in<br />
 		To create a new on you can go to <a href="{{ path('eliastre100_dashboard_create') }}">here</a><br />
+		<hr />
+		There is a list with all rooms already created : <br />
+		<ul>
+			{% for room in rooms %}
+				<li><a href="{{ path('eliastre100_rooms_homepage', { name: room.name }) }}">{{ room.name }}</a></li>
+			{% endfor %}
+		</ul>
 		<hr/>
 		You can customize this page by editing the src/Eliastre100/DashboardBundle/ressources/views/Dashboard/index.html.twig or by overload it.</p>
 {% endblock %}
