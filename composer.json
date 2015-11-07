@@ -1,7 +1,13 @@
 {
-    "name": "eliastre100/plug.like",
-    "license": "proprietary",
-    "type": "project",
+	"name": "eliastre100/plug-like",
+    "description": "Project to setup a plug.dj like website.",
+	"type": "project",
+	"license": "Apache-2.0",
+	"authors": [
+	{
+		"name": "eliastre100",
+		"email": "eliastre100@eliastre100.fr"
+	}],					    
     "autoload": {
         "psr-4": {
             "": "src/"
