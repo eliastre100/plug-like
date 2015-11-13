@@ -1,3 +1,7 @@
 eliastre100_rooms_homepage:
     path:     /room/{name}
     defaults: { _controller: Eliastre100RoomsBundle:Default:index }
+
+eliastre100_playlist_create:
+    path:     /usr/playlist/create
+    defaults: { _controller: Eliastre100RoomsBundle:Playlist:create }

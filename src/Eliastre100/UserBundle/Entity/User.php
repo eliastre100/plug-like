@@ -19,8 +19,23 @@ class User extends BaseUser
      */
     protected $id;
 
+    /**
+    * @ORM\OneToOne(targetEntity="Eliastre100\RoomsBundle\Entity\Playlist", cascade={"persist"})
+    */
+    private $current_playlist;
+
     public function __construct()
     {
         parent::__construct();
+    }
+
+    public function setCurrentPlaylist(Playlist $playlist = null)
+    {
+      $this->current_playlist = $playlist;
+    }
+
+    public function getCurrentPlaylist()
+    {
+      return $this->current_playlist;
     }
 }

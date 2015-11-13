@@ -40,7 +40,7 @@ twig:
 assetic:
     debug:          "%kernel.debug%"
     use_controller: false
-    bundles:        [ Eliastre100HomeBundle, FOSUserBundle]
+    bundles:        [ Eliastre100HomeBundle, Eliastre100DashboardBundle, FOSUserBundle]
     #java: /usr/bin/java
     filters:
         cssrewrite: ~
@@ -87,7 +87,7 @@ fos_user:
     registration:
         confirmation:
             enabled:    true
-            template: FOSUserBundle:Registration:register.email.twig
+            template: FOSUserBundle:Registration:email.txt.twig
             from_email:
                 address:        "%mailer_from%"
                 sender_name:    "%mailer_name%"

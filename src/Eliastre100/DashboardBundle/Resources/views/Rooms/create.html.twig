@@ -17,5 +17,10 @@
 	{{ form_end(form) }}
 
 	<hr />
-	<p>You can modify this page by editing src/Eliastre100/Dashboard/Ressources/views/Rooms/create.html.twig or overload it</p>
+	<p>You can modify this page by editing src/Eliastre100/Dashboard/Ressources/views/Rooms/create.html.twig<br />Note that for all page you can overload all pages <a target="_blank" href="http://symfony.com/doc/current/cookbook/bundles/override.html" >according to the documentation</a></p>
+            </p></p>
+{% endblock %}
+
+{% block dynentry %}
+	<li class="active" ><a href="{{ path('eliastre100_dashboard_create') }}">Create room</a></li>
 {% endblock %}
