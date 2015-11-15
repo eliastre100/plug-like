@@ -5,6 +5,7 @@ namespace Eliastre100\UserBundle\Entity;
 
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
+use Eliastre100\RoomsBundle\Entity\Playlist;
 
 /**
  * @ORM\Entity

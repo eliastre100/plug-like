@@ -22,12 +22,43 @@ class PlaylistController extends Controller
     	if ($form->isValid()) {
     		$playlist->setPid(uniqid());
     		$playlist->setSize(0);
-    		$playlist->setOwner($usr= $this->get('security.context')->getToken()->getUser());
+    		$playlist->setOwner($this->get('security.context')->getToken()->getUser());
     		$em = $this->getDoctrine()->getManager();
     		$em->persist($playlist);
     		$em->flush();
 				return new JsonResponse(array('status' => 'success'));
     	}
     	return new JsonResponse(array('status' => 'fail'));
+	}
+
+	public function getPlaylistsAction()
+	{
+		$playlists_public = array();
+		$em = $this->getDoctrine()->getManager();
+		$playlists = $em
+            ->getRepository('Eliastre100RoomsBundle:Playlist')
+            ->findBy(array('owner' => $this->get('security.context')->getToken()->getUser()));
+		foreach($playlists as $k => $v)
+		{
+			$playlists_public[] = array("name" => $v->getName(), "pid" => $v->getPid(), "size" => $v->getSize());
+		}
+		return new JsonResponse($playlists_public);
+	}
+
+	public function selectPlaylistAction($pid)
+	{
+		$em = $this->getDoctrine()->getManager();
+		$playlist = $em
+            ->getRepository('Eliastre100RoomsBundle:Playlist')
+            ->findOneBy(array('pid' => $pid));
+		$this->get('security.context')->getToken()->getUser()->setCurrentPlaylist($playlist);
+		$em->flush();
+		return new JsonResponse(array('status' => 'success'));
+	}
+
+	public function getCurrentPlaylistAction()
+	{
+		$playlist = $this->get('security.context')->getToken()->getUser()->getCurrentPlaylist();
+		return new JsonResponse(array('name' => $playlist->getName(), "pid" => $playlist->getPid()));
 	}
 }

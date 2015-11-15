@@ -40,7 +40,7 @@ twig:
 assetic:
     debug:          "%kernel.debug%"
     use_controller: false
-    bundles:        [ Eliastre100HomeBundle, Eliastre100DashboardBundle, FOSUserBundle]
+    bundles:        [ Eliastre100HomeBundle, Eliastre100DashboardBundle, FOSUserBundle, Eliastre100RoomsBundle ]
     #java: /usr/bin/java
     filters:
         cssrewrite: ~

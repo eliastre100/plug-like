@@ -3,7 +3,6 @@
 namespace Eliastre100\RoomsBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * PlaylistMusics
@@ -29,11 +28,7 @@ class PlaylistMusics
      */
     private $position;
 
-    /**
-     * @ORM\OneToOne(targetEntity="Eliastre100\RoomsBundle\Entity\Music")
-     */
-    private $music;
-    
+
     /**
      * Get id
      *
@@ -67,21 +62,4 @@ class PlaylistMusics
     {
         return $this->position;
     }
-
-    /**
-     *  Set playlist musics
-     */
-    public function setMusics(Music $music)
-    {
-        $this->music = $music;
-    }
-
-    /**
-     *  Get playlist musics
-     **/
-    public function getMusics()
-    {
-        return $this->music;
-    }
 }
-

@@ -5,3 +5,15 @@ eliastre100_rooms_homepage:
 eliastre100_playlist_create:
     path:     /usr/playlist/create
     defaults: { _controller: Eliastre100RoomsBundle:Playlist:create }
+
+eliastre100_playlist_list:
+    path:     /usr/playlist/list
+    defaults: { _controller: Eliastre100RoomsBundle:Playlist:getPlaylists }
+
+eliastre100_playlist_select:
+    path:     /usr/playlist/select/{pid}
+    defaults: { _controller: Eliastre100RoomsBundle:Playlist:selectPlaylist }
+
+eliastre100_playlist_current:
+    path:     /usr/playlist
+    defaults: { _controller: Eliastre100RoomsBundle:Playlist:getCurrentPlaylist }

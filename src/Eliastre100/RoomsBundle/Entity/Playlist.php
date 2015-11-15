@@ -5,6 +5,7 @@ namespace Eliastre100\RoomsBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 use Eliastre100\UserBundle\Entity\User;
+use Eliastre100\RoomsBundle\Entity\PlaylistMusics;
 
 /**
  * Playlist
@@ -53,8 +54,7 @@ class Playlist
     private $size;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Eliastre100\RoomsBundle\Entity\PlaylistMusics", cascade={"persist"})
-     *
+     * @ORM\ManyToMany(targetEntity="Eliastre100\RoomsBundle\Entity\PlaylistMusics")
      */
     private $musics;
 
@@ -177,7 +177,7 @@ class Playlist
     /**
      * Remove a music
      */
-    public function removeMusics(PlaylistMusic $music)
+    public function removeMusics(PlaylistMusics $music)
     {
         $this->musics->removeElement($music);
     }
