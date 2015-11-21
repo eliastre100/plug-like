@@ -11,8 +11,7 @@ class CreateType extends AbstractType
         $builder
             ->add('name')
             ->add('description')
-            ->add('save', 'submit')
-        ;
+            ->add('save', 'submit');
     }
 
     public function getName()

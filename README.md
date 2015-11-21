@@ -1,9 +1,12 @@
 plug-like
 =========
 
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/bedda139-239f-4c89-917a-42dd68b2f7a2/small.png)](https://insight.sensiolabs.com/projects/bedda139-239f-4c89-917a-42dd68b2f7a2)
+
 DO NOT USE FOR PRODUCTION
 =========
 Do not use the current version for production servers
+
 1. Database isn't finished to be build
 2. Apis call aren't optimised
 3. Errors page haven't been built
