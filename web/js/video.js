@@ -16,7 +16,7 @@ $(function() {
             var results = response.result.items;
             $("#results").empty();
             $.each(results, function (index, item){
-                $("#results").append("<li><img src=\"" + item.snippet.thumbnails.default.url + "\" /> <a href=\"" + item.id.videoId + "\">" + item.snippet.title  + "</a></li>");
+                $("#results").append("<li><img src=\"" + item.snippet.thumbnails.default.url + "\" /> <a href=\"#\" onClick=\"addVideo('" + item.id.videoId + "');\">" + item.snippet.title  + "</a></li>");
             });
         });
     });
@@ -31,5 +31,20 @@ function init() {
 
 function addVideo($id)
 {
-
+    $.ajax({
+        url: "/app_dev.php/usr/playlist/add",
+        type: "POST",
+        dataType: 'json',
+        data: "id=" + $id,
+        success: function(json) {
+            if (json.status == "success")
+                {
+                    $("#results").html("Video added");
+                }
+            else
+                {
+                    $("#results").html("video failed");
+                }
+        }
+    });
 }

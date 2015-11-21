@@ -22,6 +22,7 @@ class AppKernel extends Kernel
             new Eliastre100\HomeBundle\Eliastre100HomeBundle(),
             new Eliastre100\DashboardBundle\Eliastre100DashboardBundle(),
             new Eliastre100\RoomsBundle\Eliastre100RoomsBundle(),
+            new HappyR\Google\ApiBundle\HappyRGoogleApiBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

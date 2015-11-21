@@ -28,6 +28,10 @@ class PlaylistMusics
      */
     private $position;
 
+    /**
+    * @ORM\OneToOne(targetEntity="Eliastre100\RoomsBundle\Entity\Music", cascade={"persist"})
+    */
+    private $music;
 
     /**
      * Get id
@@ -61,5 +65,15 @@ class PlaylistMusics
     public function getPosition()
     {
         return $this->position;
+    }
+
+    public function setMusic(Music $music = null)
+    {
+        $this->music = $music;
+    }
+
+    public function getMusic()
+    {
+        return $this->music;
     }
 }

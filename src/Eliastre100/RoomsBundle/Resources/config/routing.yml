@@ -17,3 +17,7 @@ eliastre100_playlist_select:
 eliastre100_playlist_current:
     path:     /usr/playlist
     defaults: { _controller: Eliastre100RoomsBundle:Playlist:getCurrentPlaylist }
+
+eliastre100_playlist_add_music:
+    path:     /usr/playlist/add
+    defaults: { _controller: Eliastre100RoomsBundle:Video:AddMusic }

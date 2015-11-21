@@ -7,7 +7,7 @@
 	{
 		"name": "eliastre100",
 		"email": "eliastre100@eliastre100.fr"
-	}],					    
+	}],
     "autoload": {
         "psr-4": {
             "": "src/"
@@ -24,7 +24,8 @@
         "sensio/distribution-bundle": "~4.0",
         "sensio/framework-extra-bundle": "^3.0.2",
         "incenteev/composer-parameter-handler": "~2.0",
-        "friendsofsymfony/user-bundle": "~2.0@dev"
+        "friendsofsymfony/user-bundle": "~2.0@dev",
+        "happyr/google-api-bundle": "~2.1"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"

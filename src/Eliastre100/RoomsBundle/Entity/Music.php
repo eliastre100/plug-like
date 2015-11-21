@@ -49,7 +49,6 @@ class Music
      */
     private $thumbnail;
 
-
     /**
      * Get id
      *
@@ -156,4 +155,3 @@ class Music
         return $this->thumbnail;
     }
 }
-

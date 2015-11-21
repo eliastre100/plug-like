@@ -93,3 +93,11 @@ fos_user:
                 sender_name:    "%mailer_name%"
     service:
         mailer:  fos_user.mailer.twig_swift
+
+happy_r_google_api:
+  application_name: Plug-like
+  oauth2_client_id: 0
+  oauth2_client_secret: 0
+  oauth2_redirect_uri: 0
+  developer_key: "%googleapi_server%"
+  site_name: Plug-like

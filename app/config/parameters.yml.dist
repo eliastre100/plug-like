@@ -15,8 +15,9 @@ parameters:
     mailer_user:       ~
     mailer_password:   ~
     mailer_port:       ~
-    mailer_from:       ~
-    mailer_name:       ~
+    mailer_from:       your_email@doamin.com
+    mailer_name:       your_name
+    googleapi_server:  ~
 
     # A secret key that's used to generate certain security-related tokens
     secret:            ThisTokenIsNotSoSecretChangeIt
